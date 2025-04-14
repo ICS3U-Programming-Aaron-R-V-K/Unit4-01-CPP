@@ -6,12 +6,16 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 int main() {
     // Get user number as a string
     std::string userNumStr;
     std::cout << "Enter any number: ";
     std::cin >> userNumStr;
+    // Define variables
+    float numFloat;
+    int intNum;
 
     // Set
     int sumNum = 0;
@@ -20,7 +24,8 @@ int main() {
     // Try catch statement
     try {
         // Validate the input from the user is an integer
-        int intNum = std::stoi(userNumStr);
+        numFloat = std::stof(userNumStr);
+        intNum = round(numFloat);
 
         // Validate that the number is positive
         if (intNum < 0) {
